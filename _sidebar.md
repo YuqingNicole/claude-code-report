@@ -48,3 +48,8 @@
   * [附录D · 关键源文件索引 Top 30](docs/appendix-d)
   * [附录E · 数据流架构图](docs/appendix-e)
   * [附录F · 术语表](docs/appendix-f)
+
+---
+
+* **📄 第二篇报告（Xiao Tan）**
+  * [研究总览](docs/report2/index)

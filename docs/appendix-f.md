@@ -23,21 +23,21 @@ Memdir Memory Directory 持久化记忆文件的目录结构
 Magic Docs Magic Documents AI自动维护的特殊标记文档
 ```typescript
 TeamMemorySyncTeamMemorySync 跨团队成员的记忆同步机制
-KAIROS KAIROS 自主助手模式（希腊语"恰当的时机"）
-Coordinator Coordinator 多Agent编排器（Leader-Worker架构）
-Swarm Swarm 对等协作的Agent群组
-InProcessTeammate In-Process Teammate 进程内的轻量级队友Agent
-NDJSON Newline-Delimited JSON 以换行分隔的JSON流格式
-PKCE Proof Key for Code Exchange OAuth 2.0安全扩展
-GrowthBook GrowthBook 特性标志和A/B测试平台
-BiDi Bidirectional Text Unicode双向文本算法
-DECSTBM DEC Set Top Bottom Margin 终端硬件滚动指令
-Yoga Yoga Layout Facebook开发的跨平台Flexbox布局引擎
-Ink Ink 基于React的终端UI框架
-Bun Bun 高性能JavaScript/TypeScript运行时
+KAIROSKAIROS 自主助手模式（希腊语"恰当的时机"）
+CoordinatorCoordinator 多Agent编排器（Leader-Worker架构）
+SwarmSwarm 对等协作的Agent群组
+InProcessTeammateIn-ProcessTeammate 进程内的轻量级队友Agent
+NDJSONNewline-DelimitedJSON 以换行分隔的JSON流格式
+PKCEProofKeyforCodeExchangeOAuth2.0安全扩展
+GrowthBookGrowthBook 特性标志和A/B测试平台
+BiDiBidirectionalTextUnicode双向文本算法
+DECSTBMDECSetTopBottomMargin 终端硬件滚动指令
+YogaYogaLayoutFacebook开发的跨平台Flexbox布局引擎
+InkInk 基于React的终端UI框架
+BunBun 高性能JavaScript/TypeScript运行时
 
 术语 英文 定义
-TCC Transparency, Consent, Control macOS隐私权限管理框架
+TCCTransparency,Consent,ControlmacOS隐私权限管理框架
 
 本报告仅用于学术研究和技术讨论
 © 2026 公众号：手工川
