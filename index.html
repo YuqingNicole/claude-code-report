@@ -8,30 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
-    :root {
-      --theme-color: #6751A0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.8;
-      color: #333;
-    }
+    :root { --theme-color: #6751A0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; }
     .sidebar { background-color: #fcfcfc; border-right: 1px solid #eaecef; }
     .markdown-section h1 { color: #6751A0; border-bottom: 2px solid #6751A0; padding-bottom: 10px; }
-    .markdown-section h2 { color: #444; border-bottom: 1px solid #eaecef; padding-bottom: 8px; }
-    .sidebar-nav > ul > li > p { font-weight: bold; color: #6751A0; margin: 12px 0 4px 0; font-size: 13px; }
+    .markdown-section h2 { color: #444; border-bottom: 1px solid #eaecef; padding-bottom: 6px; }
   </style>
 </head>
 <body>
   <div id="app">正在加载报告...</div>
   <script>
-    // 自动检测 basePath（兼容 GitHub Pages 子目录和自定义域名根目录）
-    var base = window.location.pathname.replace(/\/[^\/]*$/, '') || '/';
     window.$docsify = {
       name: '📖 Claude Code<br>系统报告',
       repo: 'https://github.com/YuqingNicole/claude-code-report',
-      loadSidebar: '_sidebar.md',
-      basePath: base,
+      loadSidebar: true,
       relativePath: true,
       subMaxLevel: 2,
       auto2top: true,
@@ -39,9 +29,8 @@
       search: {
         placeholder: '🔍 搜索全文...',
         noData: '未找到结果',
-        depth: 3
-      },
-      notFoundPage: true,
+        depth: 2
+      }
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
