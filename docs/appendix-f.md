@@ -21,7 +21,8 @@ MCP Model Context Protocol 模型上下文协议，用于LLM与外部服务
 DXT DXT Claude Code的插件打包格式
 Memdir Memory Directory 持久化记忆文件的目录结构
 Magic Docs Magic Documents AI自动维护的特殊标记文档
-Team Memory Sync Team Memory Sync 跨团队成员的记忆同步机制
+```typescript
+TeamMemorySyncTeamMemorySync 跨团队成员的记忆同步机制
 KAIROS KAIROS 自主助手模式（希腊语"恰当的时机"）
 Coordinator Coordinator 多Agent编排器（Leader-Worker架构）
 Swarm Swarm 对等协作的Agent群组
@@ -40,3 +41,4 @@ TCC Transparency, Consent, Control macOS隐私权限管理框架
 
 本报告仅用于学术研究和技术讨论
 © 2026 公众号：手工川
+```

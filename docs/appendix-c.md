@@ -1,7 +1,8 @@
 # 附录C · 117个命令目录完整清单
 
 按功能分类：
-基础操作：clear, exit, help, usage, version.ts, status
+```typescript
+基础操作：clear,exit,help,usage,version.ts,status
 会话管理：resume, session, rename, tag, summary, share, export, compact, rewind, backfill-sessions
 代码工具：commit.ts, commit-push-pr.ts, diff, review, review.ts, brief.ts, advisor.ts, autofix-pr, pr_comments
 AI功能：agents, tasks, memory, plan, context, thinkback, thinkback-play, ultraplan.tsx
@@ -15,3 +16,4 @@ statusline.tsx, sandbox-toggle
 terminalSetup, upgrade, rate-limit-options, release-notes, reset-limits
 内部/测试：ant-trace, break-cache, mock-limits, heapdump, perf-issue, good-claude, passes, stickers,
 security-review.ts, init.ts, init-verifiers.ts, createMovedToPluginCommand.ts
+```
