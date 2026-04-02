@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Code 0331 · 阅读导引</title>
+  <style>
+    :root {
+      --bg: #0f0d1a;
+      --card: #1a1728;
+      --border: #2e2845;
+      --accent: #6751A0;
+      --accent-light: #967BB6;
+      --text: #e8e0f5;
+      --muted: #9b8ec4;
+      --tag-bg: #2e2845;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, "Helvetica Neue", "PingFang SC", "Noto Sans SC", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 80px;
+    }
+
+    header {
+      text-align: center;
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+
+    .kana {
+      font-size: 13px;
+      letter-spacing: .25em;
+      color: var(--accent-light);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    h1 span { color: var(--accent-light); }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .event-banner {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 18px;
+      background: linear-gradient(135deg, #2e1f5e, #1a1728);
+      border: 1px solid var(--accent);
+      border-radius: 99px;
+      font-size: 13px;
+      color: var(--accent-light);
+    }
+
+    /* ── cards grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(103,81,160,.25);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .card-label {
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      background: var(--tag-bg);
+      border-radius: 99px;
+      font-size: 12px;
+      color: var(--accent-light);
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-light);
+      margin-top: 4px;
+    }
+
+    .card-cta svg { width: 14px; height: 14px; }
+
+    /* ── comparison table ── */
+    .compare {
+      max-width: 960px;
+      width: 100%;
+      margin-top: 56px;
+    }
+
+    .compare h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      padding: 12px 20px;
+      text-align: left;
+      background: var(--tag-bg);
+      color: var(--accent-light);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    th:first-child { border-radius: 8px 0 0 8px; }
+    th:last-child  { border-radius: 0 8px 8px 0; }
+
+    td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(103,81,160,.06); }
+
+    td:first-child { color: var(--muted); font-size: 13px; }
+
+    /* ── footer ── */
+    footer {
+      margin-top: 64px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    footer a { color: var(--accent-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="kana">Claude Code · 0331 Source Map Leak</div>
+  <h1>深度解读<span>资源导引</span></h1>
+  <p class="subtitle">
+    2026.03.31，Anthropic 在 npm 包中意外随附 59.8 MB Source Map，<br>
+    完整 TypeScript 源码及开发者注释随之公开。<br>
+    以下是围绕此次事件产生的深度研究合集。
+  </p>
+  <div class="event-banner">1,884 files · 394,222 lines · 54 tools · 89 feature flags</div>
+</header>
+
+<div class="grid">
+
+  <!-- Card 1: 手工川完整报告 -->
+  <a class="card" href="https://yuqingnicole.github.io/claude-code-report/" target="_blank" rel="noopener">
+    <div class="card-icon">📖</div>
+    <div class="card-label">完整文档 · 简体中文</div>
+    <h2>Claude Code 0331 系统报告</h2>
+    <p>
+      手工川版·完整30章 + 6附录，全面覆盖架构、工具系统、KAIROS 自主 Agent、
+      四层记忆、Bridge 远程控制、安全机制等，并附 Xiao Tan 对 Prompt 机制与
+      Agent 调度链的深度补充研究（第二篇）。
+    </p>
+    <div class="tags">
+      <span class="tag">30章 + 6附录</span>
+      <span class="tag">第二篇 Xiao Tan</span>
+      <span class="tag">Docsify 文档站</span>
+    </div>
+    <div class="card-cta">
+      前往阅读
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Card 2: Harness Engineering 深度站 -->
+  <a class="card" href="https://claude-code-harness-blog.vercel.app/" target="_blank" rel="noopener">
+    <div class="card-icon">⚙️</div>
+    <div class="card-label">深度专题 · 繁体中文</div>
+    <h2>Harness Engineering 架构精析</h2>
+    <p>
+      聚焦 Claude Code 的工程调度层：Query Loop 主循环、Agent 编排与 Cache 共享、
+      分层权限与 ML 分类器、并发控制策略，以及完整的 Prompt 全景图（BashTool、
+      AgentTool、Compact、Memory、Coordinator）。
+    </p>
+    <div class="tags">
+      <span class="tag">Agent 编排</span>
+      <span class="tag">Prompt 全景</span>
+      <span class="tag">并发控制</span>
+    </div>
+    <div class="card-cta">
+      前往阅读
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </div>
+  </a>
+
+</div>
+
+<!-- Comparison Table -->
+<div class="compare">
+  <h3>内容定位对比</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>维度</th>
+        <th>📖 完整报告站</th>
+        <th>⚙️ Harness Engineering 站</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>覆盖范围</td>
+        <td>全系统（架构 + 工具 + Agent + 安全 + 隐藏特性 + 产品战略）</td>
+        <td>专注工程调度层（Query Loop / 权限 / 并发 / Prompt）</td>
+      </tr>
+      <tr>
+        <td>适合读者</td>
+        <td>想全面了解 Claude Code 架构的读者</td>
+        <td>想深入理解 Agent 运行机制与 Prompt 工程的读者</td>
+      </tr>
+      <tr>
+        <td>语言</td>
+        <td>简体中文</td>
+        <td>繁体中文</td>
+      </tr>
+      <tr>
+        <td>亮点章节</td>
+        <td>KAIROS 自主 Agent · Buddy 宠物系统 · 七层安全防护</td>
+        <td>Ch.3 代理编排 · Ch.14 Prompt 全景图 · Ch.7 并行控制</td>
+      </tr>
+      <tr>
+        <td>来源</td>
+        <td>手工川 + Xiao Tan · 整理：Nicole</td>
+        <td>独立研究团队</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  整理：<a href="https://nicoles.garden/" target="_blank">Nicole</a>
+  · 公众号「Nicole with」
+  · X <a href="https://x.com/chenyuq56901969" target="_blank">@chenyuq56901969</a>
+  <br>
+  <span style="color:#5a4f7a; font-size:12px;">
+    本资料仅用于学术研究与技术讨论，不涉及代码再分发或商业用途。
+  </span>
+</footer>
+
+</body>
+</html>
