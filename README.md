@@ -74,4 +74,21 @@ KETER（主协调器 main.tsx）
 
 ---
 
+## 第二篇：Xiao Tan 深度研究（Prompt 机制 & Agent 调度链）
+
+| 章节 | 核心内容 |
+|------|---------|
+| [第1章](docs/report2/r2-ch01) | 研究范围与结论总览 |
+| [第2章](docs/report2/r2-ch02) | 源码结构全景：为什么更像 Agent OS |
+| [第3章](docs/report2/r2-ch03) | 系统提示词总装：prompts.ts 的真实地位 |
+| [第4章](docs/report2/r2-ch04) | Prompt 全量提取与模块级拆解 |
+| [第5章](docs/report2/r2-ch05) | Agent Prompt 与 built-in agents 深挖 |
+| [第6章](docs/report2/r2-ch06) | Agent 调度链：AgentTool → runAgent → query |
+| [第7章](docs/report2/r2-ch07) | Skills / Plugins / Hooks / MCP 生态深挖 |
+| [第8章](docs/report2/r2-ch08) | 权限、Hook、工具执行链深挖 |
+| [第9章](docs/report2/r2-ch09) | **为什么 Claude Code 这么强**：从源码看护城河 |
+| [第10章](docs/report2/r2-ch10) | 关键文件索引与后续深挖方向 |
+
+---
+
 *本报告仅用于学术研究和技术讨论，不涉及任何代码的再分发或商业利用。*
