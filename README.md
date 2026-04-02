@@ -8,6 +8,7 @@
 **30 chapters · 6 appendices · 12 parts**
 
 来源：公众号「手工川」| 2026.04.01
+补充研究：Xiao Tan（[@tvytlx](https://x.com/tvytlx)）| 公众号「Xiao Tan AI」
 
 ---
 
