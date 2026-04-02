@@ -11,7 +11,7 @@
 
 补充研究：Xiao Tan（[@tvytlx](https://x.com/tvytlx)）| 公众号「Xiao Tan AI」
 
-整理：[Nicole](https://nicoles.garden/) | 公众号「Nicole with AI」| X：[@chenyuq56901969](https://x.com/chenyuq56901969)
+整理：[Nicole](https://nicoles.garden/) | 公众号「Nicole with」| X：[@chenyuq56901969](https://x.com/chenyuq56901969)
 
 ---
 
