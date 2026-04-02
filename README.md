@@ -15,6 +15,10 @@
 
 ---
 
+> ⭐ 觉得有用？[给这个仓库点个 Star](https://github.com/YuqingNicole/claude-code-report) — 方便下次找到，也让更多人看到！
+
+---
+
 ## 核心发现速览
 
 | 维度 | 数据 |
